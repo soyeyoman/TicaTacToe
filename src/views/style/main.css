@@ -1,0 +1,60 @@
+#rootWelcome{
+    -fx-background-image: url("../images/2.jpg");
+}
+
+#introLabel{
+    -fx-font-family: fantasy;
+    -fx-text-fill: aliceblue;
+    -fx-font-size: 30px;
+}
+
+.Fxbtn{
+    -fx-background-color: dodgerblue;
+    -fx-border-radius: 3px;
+}
+
+
+.Fxbtn:hover{
+    -fx-background-color: mediumspringgreen;
+}
+
+#gameview{
+    -fx-background-image: url("../images/1.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+
+#gamelabel{
+    -fx-text-fill: red;
+    -fx-font-size: 30px;
+}
+
+.text{
+    -fx-font-size:20pt;
+    -fx-font-style:bold;
+    -fx-font-family: fantasy;
+    -fx-content-display: center;
+}
+
+.xtext{
+    -fx-text-fill: red;
+}
+
+.otext{
+    -fx-text-fill: green;
+}
+
+
+#prompt{
+    -fx-background-image: url("../images/1.jpg");
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: cover;
+}
+#prompt Label{
+    -fx-text-fill: red;
+}
+#prompt Button{
+    -fx-border-radius: 4px;
+    -fx-background-color: aqua;
+}
+

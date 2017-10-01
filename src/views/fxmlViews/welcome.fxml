@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="rootWelcome" prefHeight="400.0" prefWidth="600.0" stylesheets="@../style/main.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.WelcomeController">
+   <children>
+      <JFXTextField fx:id="play1" focusColor="#41a648" labelFloat="true" prefHeight="25.0" prefWidth="484.0" promptText="Player One" style="-fx-background-color: #fff;" translateY="-60.0" unFocusColor="#e8e3e3">
+         <StackPane.margin>
+            <Insets left="50.0" right="50.0" />
+         </StackPane.margin>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="play2" focusColor="#44a641" labelFloat="true" promptText="Player Two" style="-fx-background-color: #fff;" unFocusColor="#f2e6e6">
+         <StackPane.margin>
+            <Insets left="50.0" right="50.0" />
+         </StackPane.margin>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="setPlayerbtn" onAction="#game" prefHeight="46.0" prefWidth="110.0" styleClass="Fxbtn" text="PLAY" translateY="100.0" />
+      <ImageView fitHeight="34.0" fitWidth="36.0" translateX="250.0" translateY="-170.0" onMouseClicked="#exit">
+         <Image url="@../images/x1.jpg" />
+      </ImageView>
+   </children>
+</StackPane>
