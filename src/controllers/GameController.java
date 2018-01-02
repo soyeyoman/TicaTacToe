@@ -2,12 +2,10 @@ package controllers;
 
 import Models.Game;
 import Models.Player;
-import com.sun.xml.internal.bind.v2.runtime.output.ForkXmlOutput;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.Cursor;
-import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
@@ -18,13 +16,9 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import views.Prompts.AfterWin;
 import views.Prompts.ConfirmBox;
-import views.Prompts.Prompt;
-
 import java.io.IOException;
 import java.util.Random;
 
