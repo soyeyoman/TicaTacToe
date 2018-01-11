@@ -30,11 +30,17 @@ public class Prompt {
     box.getChildren().addAll(labe,button);
     box.setAlignment(Pos.CENTER);
     box.setId("prompt");
+    box.requestFocus();
+    box.setOnKeyPressed( e ->{
+        window.close();
+    });
     Scene scene = new Scene(box);
     scene.getStylesheets().add(getClass().getResource("../style/main.css").toString());
     window.setScene(scene);
     window.initStyle(StageStyle.UNDECORATED);
     window.showAndWait();  //allows show and wait
+
+
         boolean ret = false;
     if(close){
         ConfirmBox confirmBox = new ConfirmBox();

@@ -13,6 +13,13 @@
     -fx-border-radius: 3px;
 }
 
+.FxbtnR{
+    -fx-background-color: mediumspringgreen;
+}
+
+.FxbtnR:hover{
+ -fx-background-color: dodgerblue;
+}
 
 .Fxbtn:hover{
     -fx-background-color: mediumspringgreen;
@@ -31,7 +38,6 @@
 
 .text{
     -fx-font-size:20pt;
-    -fx-font-style:bold;
     -fx-font-family: fantasy;
     -fx-content-display: center;
 }

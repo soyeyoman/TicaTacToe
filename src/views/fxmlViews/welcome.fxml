@@ -10,7 +10,7 @@
 
 <StackPane fx:id="rootWelcome" prefHeight="400.0" prefWidth="600.0" stylesheets="@../style/main.css" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.WelcomeController">
    <children>
-      <JFXTextField fx:id="play1" focusColor="#41a648" labelFloat="true" prefHeight="25.0" prefWidth="484.0" promptText="Player One" style="-fx-background-color: #fff;" translateY="-60.0" unFocusColor="#e8e3e3">
+      <JFXTextField fx:id="play1" onKeyPressed="#navigate" focusColor="#41a648" labelFloat="true" prefHeight="25.0" prefWidth="484.0" promptText="Player One" style="-fx-background-color: #fff;" translateY="-60.0" unFocusColor="#e8e3e3">
          <StackPane.margin>
             <Insets left="50.0" right="50.0" />
          </StackPane.margin>
@@ -18,7 +18,7 @@
             <Font size="18.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="play2" focusColor="#44a641" labelFloat="true" promptText="Player Two" style="-fx-background-color: #fff;" unFocusColor="#f2e6e6">
+      <JFXTextField fx:id="play2" onKeyPressed="#navigate" focusColor="#44a641" labelFloat="true" promptText="Player Two" style="-fx-background-color: #fff;" unFocusColor="#f2e6e6">
          <StackPane.margin>
             <Insets left="50.0" right="50.0" />
          </StackPane.margin>

@@ -1,5 +1,6 @@
 package controllers;
 
+import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextField;
 import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
@@ -8,6 +9,8 @@ import javafx.scene.Cursor;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
@@ -17,6 +20,7 @@ import views.Prompts.ConfirmBox;
 import views.Prompts.Prompt;
 
 import java.io.IOException;
+import java.security.Key;
 
 
 /**
@@ -29,7 +33,9 @@ public class WelcomeController {
     @FXML Button setPlayerbtn;
     @FXML JFXTextField play1;
     @FXML JFXTextField play2;
+
     MediaPlayer mp ;
+    private int navpos = 0;
     public void initialize(){
         if(!WelcomeController.isSplashed){
             loadSplashScreen();
@@ -79,6 +85,9 @@ public class WelcomeController {
         if(play1.getText().equals("") || play2.getText().equals("")){
             Prompt prompt = new Prompt();
             prompt.display("Warning","Enter all players",false);
+        }else if(play1.getText().equals(play2.getText())){
+            Prompt prompt = new Prompt();
+            prompt.display("Warning","Enter Different Names",false);
         }else{
             Stage stage = (Stage)setPlayerbtn.getScene().getWindow();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("../views/fxmlViews/game.fxml"));
@@ -98,5 +107,29 @@ public class WelcomeController {
         if(exit){
             stage.close();
         }
+    }
+
+    public void navigate(KeyEvent keyEvent) {
+        if(navpos == 0){
+            if(keyEvent.getCode() == KeyCode.DOWN){
+                navpos = 1;
+                play2.requestFocus();
+            }
+        }else if(navpos == 1){
+
+           if(keyEvent.getCode() == KeyCode.UP){
+                navpos = 0;
+                play1.requestFocus();
+            }
+        }
+
+        if(keyEvent.getCode() == KeyCode.ENTER){
+            try {
+                game();
+            } catch (IOException e) {
+                System.out.println(e.getMessage());
+            }
+        }
+
     }
 }

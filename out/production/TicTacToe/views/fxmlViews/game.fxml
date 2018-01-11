@@ -1,35 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<GridPane fx:id="gameview" alignment="center" hgap="3" onKeyPressed="#startGame" prefHeight="400.0" prefWidth="600.0" stylesheets="@../style/main.css" vgap="3" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.GameController">
-   <children>
-           <TextField fx:id="z0" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-           <TextField fx:id="z1" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-           <TextField fx:id="z2" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="2" GridPane.rowIndex="0" />
-           <TextField fx:id="z3" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="3" GridPane.rowIndex="0" />
-           <TextField fx:id="o0" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-           <TextField fx:id="o1" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-           <TextField fx:id="o2" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-           <TextField fx:id="o3" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-           <TextField fx:id="t0" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-           <TextField fx:id="t1" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-           <TextField fx:id="t2" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-           <TextField fx:id="t3" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-           <TextField fx:id="h0" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-           <TextField fx:id="h1" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-           <TextField fx:id="h2" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-           <TextField fx:id="h3" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+<VBox fx:id="fullbox" maxHeight="400" onKeyPressed="#startGame"  prefWidth="600.0" stylesheets="@../style/main.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.GameController">
+  <children>
+          <GridPane fx:id="gameview" alignment="center" hgap="3" prefHeight="400" vgap="3">
+                  <children>
+                          <TextField fx:id="z0" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                          <TextField fx:id="z1" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                          <TextField fx:id="z2" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                          <TextField fx:id="z3" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                          <TextField fx:id="o0" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                          <TextField fx:id="o1" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                          <TextField fx:id="o2" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                          <TextField fx:id="o3" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                          <TextField fx:id="t0" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                          <TextField fx:id="t1" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                          <TextField fx:id="t2" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                          <TextField fx:id="t3" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                          <TextField fx:id="h0" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                          <TextField fx:id="h1" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                          <TextField fx:id="h2" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                          <TextField fx:id="h3" editable="false" maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" onMousePressed="#setPoint" prefHeight="60.0" prefWidth="60.0" styleClass="text" GridPane.columnIndex="3" GridPane.rowIndex="3" />
 
-           <Label fx:id="gamelabel" styleClass="infolabel" text="Press Enter to start" translateY="-300.0" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="6" />
-           <ImageView fitHeight="34.0" fitWidth="36.0" translateX="360.0" translateY="-60.0" onMouseClicked="#exit">
-                   <Image url="@../images/x1.jpg" />
-           </ImageView>
-   </children>
-</GridPane>
+                          <Label fx:id="gamelabel" styleClass="infolabel" text="Press Enter to start" translateY="-300.0" GridPane.columnIndex="0" GridPane.columnSpan="4" GridPane.rowIndex="6" />
+                          <ImageView fx:id="closebtn" fitHeight="34.0" fitWidth="36.0" onMouseClicked="#exit" translateX="360.0" translateY="-60.0">
+                                  <Image url="@../images/x1.jpg" />
+                          </ImageView>
+
+                  </children>
+
+          </GridPane>
+          <HBox fx:id="winbox" prefHeight="0">
+              <padding>
+                     <Insets left="1" />
+              </padding>
+          </HBox>
+  </children>
+</VBox>
